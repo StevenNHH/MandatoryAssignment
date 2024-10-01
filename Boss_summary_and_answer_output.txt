@@ -1,0 +1,58 @@
+Summarize your conclusion for your boss.
+>Running the codes with the 3 different methods on the 3 different data sets multiple times, shows that there is enormous variability across these calculated times for each of the different iterations of running the code. While the times reported on the calculations have such high variability per run, the times displayed for the Numpy calculations remain the most stable. These test are highly machine dependent. Moreover, the state of the machine, which includes simultaneously performing other operations and the temperature of the system, show to have a significant influence in these test. This variance is of such a large scale, that making a conclusive decision on which of the methods across the different data sets performs faster or slower, would be premature. However, some suggestions can be set forth.
+
+Which approach computes the standard deviation the fastest?
+>In general, Method 2, using sum and len, appears to be the fastest for sample 1 and sample 2. However, for sample 3, where n=10000, the calculations by method 3, using NumPy, outperforms the other approaches. However, sometimes method 1, using a loop, was faster across all samples. This anomaly relates to the notion on the inconclusiveness of this test, given the high variability and machine-state dependency.
+
+Is one approach always faster or does it depend on the length of the sequence?
+>This was answered concisely in the previous paragraph, but more elaborations to clarify the findings can be made. When method 1, using a loop, would have been coded more efficiently, it could be faster for smaller data sets. However, the clumsy coding utilized makes it slow anyways and adds to the previously explained high variance across time differences reported. In addition, using the statistics package for Python, calculations are even faster for all samples. This probably relates to the high level of optimization in that package. However, using those results here was outside the scope of this assignment, but mentioning it is relevant to the argument about coding efficiency and purpose optimization of the packages and codes deployed utilizing them.
+
+An overview of the results of a run can be found below:
+>Part A:
+The original sample includes the numbers: [1, 2, 3, 4, 5]
+Method 1: Standard Deviation using loops is: 1.414213562373095
+Method 2: Standard Deviation using sum & len is: 1.4142135623730951
+Method 3: Standard Deviation using NumPy is: 1.4142135623730951
+
+>Part B:
+The answers to question 1 are:
+The list of 100 values for column 1: [0.6823518632481435, �
+The list of 1000 values for column 2: [0.6823518632481435, 0.053821018802222675, �
+The list of 10000 values for column 3: [0.6823518632481435, 0.053821018802222675, 0.22035987277261138, �
+
+The answers to question 2 are:
+Using method 1:
+Column 1: Standard Deviation using loops is: 0.28237210973536014
+Column 2: Standard Deviation using loops is: 0.2846744328385059
+Column 3: Standard Deviation using loops is: 0.2854045269476154
+Using method 2:
+Column 1: Standard Deviation using sum & len is: 0.28237210973536014
+Column 2: Standard Deviation using sum & len is: 0.28467443283850596
+Column 3: Standard Deviation using sum & len is: 0.2854045269476156
+Using method 3:
+Column 1: Standard Deviation using NumPy is: 0.28237210973536014
+Column 2: Standard Deviation using NumPy is: 0.28467443283850596
+Column 3: Standard Deviation using NumPy is: 0.2854045269476156
+
+The answers to question 3 are:
+Using method 1:
+Column 1: Standard Deviation using loops is: 0.28237210973536014
+          and was calculated in 0.022791199997300282 seconds
+Column 2: Standard Deviation using loops is: 0.2846744328385059
+          and was calculated in 0.016653900005621836 seconds
+Column 3: Standard Deviation using loops is: 0.2854045269476154
+          and was calculated in 0.01633910002419725 seconds
+Using method 2:
+Column 1: Standard Deviation using sum & len is: 0.28237210973536014
+          and was calculated in 0.0163227999873925 seconds
+Column 2: Standard Deviation using sum & len is: 0.28467443283850596
+          and was calculated in 0.014981399988755584 seconds
+Column 3: Standard Deviation using sum & len is: 0.2854045269476156
+          and was calculated in 0.01830840000184253 seconds
+Using method 3:
+Column 1: Standard Deviation using NumPy is: 0.28237210973536014
+          and was calculated in 0.017860299994936213 seconds
+Column 2: Standard Deviation using NumPy is: 0.28467443283850596
+          and was calculated in 0.017547600000398234 seconds
+Column 3: Standard Deviation using NumPy is: 0.2854045269476156
+          and was calculated in 0.017870799987576902 seconds
